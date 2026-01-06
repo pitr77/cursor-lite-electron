@@ -1,0 +1,25 @@
+{
+  "name": "cursor-lite-electron",
+  "private": true,
+  "version": "0.0.0",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:vite\" \"wait-on http://localhost:5173 && npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "electron .",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-virtuoso": "^4.6.3",
+    "better-sqlite3": "^11.7.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^7.2.4",
+    "electron": "^33.2.0",
+    "concurrently": "^9.1.0",
+    "wait-on": "^8.0.1"
+  }
+}
